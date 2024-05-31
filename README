@@ -1,4 +1,4 @@
-# 03 JavaScript: Employee Payroll Tracker
+# Challenge 3: Employee Payroll Tracker
 
 Modified starter code provided on Challenge 3, to create an application that enables a payroll manager to view and manage employee payroll data. This app runs in a browser. Added a While loop to the Collect Employees function to allow the user to enter first, last name and salary for each employee; with the option to continue to add employees or stop.
 
