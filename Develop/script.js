@@ -2,54 +2,54 @@
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 // Collect employee data
-const collectEmployees = function() {
-    const employees = [];
+const collectEmployees = function () {
+  const employees = [];
 
-    let addEmployee = true;
-    while (addEmployee) {
-      const firstName = prompt('enter the employee\'s first name:');
-      const lastName = prompt('enter the employee\'s last name:');
-      let salary = prompt('Enter the Employee\'s salary:');
-      
-      salary = isNaN(parseFloat(salary)) ? 0 : parseFloat(salary);
+  let addEmployee = true;
+  while (addEmployee) {
+    const firstName = prompt('enter the employee\'s first name:');
+    const lastName = prompt('enter the employee\'s last name:');
+    let salary = prompt('Enter the Employee\'s salary:');
 
-      employees.push({
-        firstName: firstName,
-        lastName: lastName,
-        salary: salary
-      });
-      const continueAdding = confirm('Do you want to add another employee?');
-      addEmployee = continueAdding;
-    }
+    salary = isNaN(parseFloat(salary)) ? 0 : parseFloat(salary);
 
-    return employees;
-  };
+    employees.push({
+      firstName: firstName,
+      lastName: lastName,
+      salary: salary
+    });
+    const continueAdding = confirm('Do you want to add another employee?');
+    addEmployee = continueAdding;
+  }
+
+  return employees;
+};
 
 
 // Display the average salary
-const displayAverageSalary = function(employeesArray) {
-function displayAverageSalary(employees) {
-  let totalSalary= 0;
-  employees.forEach(employee => {
-    totalSalary += employee.salary;
-  });
-  const averageSalary = totalSalary / employees.lenght;
-  console.log(`average Salary: $$(averageSalary.toFixed(2)} for ${employees.length} employees`);
-}
- 
-function trackEmployeeData() {
-  const employees = collectEmployees ();
-  employees.sort ((a,b) => a.lastName.localeCompare(b.lastName));
-  displayEmployees(employees);
-  displayAverageSalary(employees);
-  getRandomEmployee(employees);
-}
+const displayAverageSalary = function (employeesArray) {
+  function displayAverageSalary(employees) {
+    let totalSalary = 0;
+    employees.forEach(employee => {
+      totalSalary += employee.salary;
+    });
+    const averageSalary = totalSalary / employees.lenght;
+    console.log(`average Salary: $$(averageSalary.toFixed(2)} for ${employees.length} employees`);
+  }
+
+  function trackEmployeeData() {
+    const employees = collectEmployees();
+    employees.sort((a, b) => a.lastName.localeCompare(b.lastName));
+    displayEmployees(employees);
+    displayAverageSalary(employees);
+    getRandomEmployee(employees);
+  }
 
   // TODO: Calculate and display the average salary 
 }
 
 // Select a random employee
-const getRandomEmployee = function(employeesArray) {
+const getRandomEmployee = function (employeesArray) {
   // TODO: Select and display a random employee
 }
 
@@ -60,7 +60,7 @@ const getRandomEmployee = function(employeesArray) {
 */
 
 // Display employee data in an HTML table
-const displayEmployees = function(employeesArray) {
+const displayEmployees = function (employeesArray) {
   // Get the employee table
   const employeeTable = document.querySelector('#employee-table');
 
@@ -83,9 +83,9 @@ const displayEmployees = function(employeesArray) {
 
     const salaryCell = document.createElement("td");
     // Format the salary as currency
-    salaryCell.textContent = currentEmployee.salary.toLocaleString("en-US",{
-      style:"currency",
-      currency:"USD"
+    salaryCell.textContent = currentEmployee.salary.toLocaleString("en-US", {
+      style: "currency",
+      currency: "USD"
     });
 
     newTableRow.append(salaryCell);
@@ -94,7 +94,7 @@ const displayEmployees = function(employeesArray) {
   }
 }
 
-const trackEmployeeData = function() {
+const trackEmployeeData = function () {
   const employees = collectEmployees();
 
   console.table(employees);
@@ -105,7 +105,7 @@ const trackEmployeeData = function() {
 
   getRandomEmployee(employees);
 
-  employees.sort(function(a,b) {
+  employees.sort(function (a, b) {
     if (a.lastName < b.lastName) {
       return -1;
     } else {
