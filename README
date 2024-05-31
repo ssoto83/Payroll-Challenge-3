@@ -1,6 +1,6 @@
 # Challenge 3: Employee Payroll Tracker
 
-Modified starter code provided on Challenge 3, to create an application that enables a payroll manager to view and manage employee payroll data. This app runs in a browser. Added a While loop to the Collect Employees function to allow the user to enter first, last name and salary for each employee; with the option to continue to add employees or stop.
+Modified starter code provided on Challenge 3, to create an application that enables a payroll manager to view and manage employee payroll data. This app runs in a browser. Added a While loop to the Collect Employees function to allow the user to enter first, last name and salary for each employee; with the option to continue to add employees or stop. I used the help of the Xpert Learning Assistant for this challenge.
 
 ## The User Story
 AS A payroll manager
@@ -23,3 +23,4 @@ THEN my employee data is displayed on the page sorted alphabetically by last nam
 The following images show the web application's appearance and functionality:
 
 ## URL for deployed site
+https://ssoto83.github.io/Payroll-Challenge-3/
