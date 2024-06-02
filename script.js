@@ -26,12 +26,12 @@ const collectEmployees = function () {
 const displayAverageSalary = function (employeesArray) {
   let totalSalary = 0;
 
-  employees.Array.forEach(employee => {
+  employeesArray.forEach(employee => {
     totalSalary += employee.salary;
   });
 
   const averageSalary = totalSalary / employeesArray.length;
-  console.log(`average Salary: $$(averageSalary.toFixed(2)} for ${employeesArray.length} employees`);
+  console.log(`average Salary: $${averageSalary.toFixed(2)} for ${employeesArray.length} employees`);
 };
 
 
