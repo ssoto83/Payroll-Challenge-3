@@ -1,3 +1,4 @@
+// declaring the variable for adding employee's
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 const collectEmployees = function () {
@@ -5,10 +6,10 @@ const collectEmployees = function () {
   let addEmployee = true;
 
   while (addEmployee) {
-    const firstName = prompt('enter the employee\'s first name:');
-    const lastName = prompt('enter the employee\'s last name:');
-    let salary = prompt('Enter the Employee\'s salary:');
-    salary = isNaN(parseFloat(salary)) ? 0 : parseFloat(salary);
+    const firstName = prompt('enter the employee\'s first name:'); // prompt to add employee's first name
+    const lastName = prompt('enter the employee\'s last name:'); // prompt to add employee's last name
+    let salary = prompt('Enter the Employee\'s salary:'); // prompt to add employee's salary
+    salary = isNaN(parseFloat(salary)) ? 0 : parseFloat(salary); // isNan checks if the input is a number and if not changes it to zero
 
     employees.push({
       firstName: firstName,
@@ -30,7 +31,7 @@ const displayAverageSalary = function (employeesArray) {
     totalSalary += employee.salary;
   });
 
-  const averageSalary = totalSalary / employeesArray.length;
+  const averageSalary = parseFloat(totalSalary) / employeesArray.length;
   console.log(`average Salary: $${averageSalary.toFixed(2)} for ${employeesArray.length} employees`);
 };
 
@@ -92,6 +93,7 @@ const trackEmployeeData = function() {
 
   getRandomEmployee(employees);
 
+  // Compares names and sorts alphabetically
   employees.sort(function(a,b) {
     if (a.lastName < b.lastName) {
       return -1;

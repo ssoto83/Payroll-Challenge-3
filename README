@@ -18,9 +18,14 @@ THEN I am prompted to add a new employee
 WHEN I choose to cancel
 THEN my employee data is displayed on the page sorted alphabetically by last name, and the console shows computed and aggregated data
 
+## URL for deployed site
+https://ssoto83.github.io/Payroll-Challenge-3/
+
 ## Mock-Up
 
 The following images show the web application's appearance and functionality:
 
-## URL for deployed site
-https://ssoto83.github.io/Payroll-Challenge-3/
+![Alt Text](assets/Payr1.png)
+![Alt Text](assets/Payr2.png)
+![Alt Text](assets/Payr3.png)
+![Alt Text](assets/Payr4.png)
